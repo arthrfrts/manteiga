@@ -53,6 +53,12 @@
 				<a class="info post_date" href="{Permalink}" rel="bookmark">
 					<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
 				</a>
+
+				{block:IndexPage}
+			    {block:IfDisqusShortname}
+				    <a class="info comment_count" href="{Permalink}#disqus_thread">{lang:View comments}</a>
+			    {/block:IfDisqusShortname}
+				{/block:IndexPage}
 			</p>
 
 			{block:PermalinkPage}
