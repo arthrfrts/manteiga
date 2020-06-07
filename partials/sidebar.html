@@ -1,0 +1,61 @@
+{block:IndexPage}
+	<aside class="sidebar">
+	  {block:IfSidebarWidget}
+			{text:Sidebar widget}
+		{/block:IfSidebarWidget}
+
+		{block:Twitter}
+			<div class="links" id="twitter" style="display:none;">
+				<h3>
+					<a href="https://twitter.com/{TwitterUsername}">{text:Twitter Widget Title}</a>
+				</h3>
+				<ul id="tweets"></ul>
+			</div>
+			<script type="text/javascript">
+				function recent_tweets(data) {
+					for (i=0; i<{text:Tweets to show}; i++) {
+						document.getElementById("tweets").innerHTML =
+							document.getElementById("tweets").innerHTML +
+								'<li><a class="twitter_link" href="https://twitter.com/{TwitterUsername}/status/' +
+								(data[i].id_str ? data[i].id_str : data[i].id) +
+								'">' + data[i].text +
+	              '</a></li>';
+						}
+
+					document.getElementById("twitter").style.display = 'block';
+				}
+			</script>
+		{/block:Twitter}
+
+	  <div class="fixed_menu">
+	    <input id="toggle_menu" type="checkbox" />
+	    <label for="toggle_menu">
+	    <img width="48" height="48" src="{PortraitURL-96}" alt="{lang:Navigate}" role="img" />
+	    </label>
+	    <nav class="menu">
+	      <form action="/search" method="get">
+	        <input type="search" name="q" placeholder="{lang:Search keywords}" />
+	      </form>
+
+	      {block:HasPages}
+	      	{block:Pages}
+	      		<a class="menu_item" href="{URL}">
+	      			{Label}
+	      		</a>
+	      	{/block:Pages}
+				{/block:HasPages}
+
+	      {block:AskEnabled}
+	      	<a class="menu_item" href="/ask">
+	      		{AskLabel}
+	      	</a>
+	      {/block:AskEnabled}
+	      {block:SubmissionsEnabled}
+	      	<a class="menu_item" href="/submit">
+	      		{SubmitLabel}
+	      	</a>
+	      {/block:SubmissionsEnabled}
+	    </nav>
+	  </div>
+	</aside>
+{/block:IndexPage}

@@ -1,0 +1,66 @@
+<header class="post_header">
+  {block:Text}
+  	{block:Title}
+  		{block:IndexPage}
+  			<h2 class="post_title">
+    			<a href="{Permalink}" rel="bookmark">{Title}</a>
+  			</h2>
+  		{/block:IndexPage}
+  		{block:PermalinkPage}
+  			<h1 class="post_title">
+    			{Title}
+  			</h1>
+			{/block:PermalinkPage}
+		{/block:Title}
+	{/block:Text}
+
+	{block:Link}
+  	{block:IndexPage}
+  		<h2 class="post_title">
+    		<a href="{URL}" rel="{Target}">{Name} &rarr;</a>
+  		</h2>
+		{/block:IndexPage}
+		{block:PermalinkPage}
+  		<h1 class="post_title">
+  			<a href="{URL}" rel="{Target}">{Name} &rarr;</a>
+  		</h1>
+  	{/block:PermalinkPage}
+ 	{/block:Link}
+
+  {block:Chat}
+  	{block:IndexPage}
+  		<h2 class="post_title">
+    		<a href="{Permalink}" rel="boolmark">{Title}</a>
+  		</h2>
+		{/block:IndexPage}
+		{block:PermalinkPage}
+			<h1 class="post_title">
+				{Title}
+			</h1>
+		{/block:PermalinkPage}
+	{/block:Chat}
+
+	{block:Date}
+		<div class="post_meta">
+    	<p class="post_info">
+      	{block:Link}
+					{block:Host}
+						<span class="info link_host">({Host})</span>
+					{/block:Host}
+				{/block:Link}
+
+				<a class="info post_author {PostAuthorName}" href="{PostAuthorURL}" rel="author">{PostAuthorTitle}</a>
+				<a class="info post_date" href="{Permalink}" rel="bookmark">
+					<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+				</a>
+			</p>
+
+			{block:PermalinkPage}
+				<div class="post_actions">
+					{ReblogButton}
+					{LikeButton}
+				</div>
+				{/block:PermalinkPage}
+			</div>
+		{/block:Date}
+	</header>

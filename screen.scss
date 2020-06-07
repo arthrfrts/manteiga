@@ -1,0 +1,35 @@
+$color-text: var(--color-text);
+$color-text-rgb: var(--rgb-color-text);
+
+$color-accent: var(--color-acent);
+$color-accent-rgb: var(--rgb-color-accent);
+
+$color-background: var(--color-background);
+$color-background-rgb: var(--rgb-color-background);
+
+$color-header: var(--color-header);
+$color-header-rgb: var(--rgb-color-header);
+
+$color-footer: $color-accent;
+$color-footer-rgb: $color-accent-rgb;
+
+$base-font-family: var(--base-font-family);
+$body-font-family: var(--content-font-family);
+$title-font-weight: var(--headings-font-weight);
+
+$font-content: var(--font-content);
+$font-headings: var(--font-headings);
+
+$content-width: 1020px;
+$on-laptop: 800px;
+$on-palm: 640px;
+$spacing-unit: 20px;
+
+@mixin media-query($device) {
+  @media (max-width: $device) {
+    @content;
+  }
+}
+
+@import "sass/base";
+@import "sass/layout";

@@ -1,0 +1,76 @@
+{block:IfShowMenu}
+	<nav class="site_menu">
+		{block:HasPages}
+			{block:Pages}
+				<a class="menu_item" href="{URL}">
+					{Label}
+				</a>
+			{/block:Pages}
+		{/block:HasPages}
+		{block:AskEnabled}
+			<a class="menu_item" href="/ask">
+				{AskLabel}
+			</a>
+		{/block:AskEnabled}
+		{block:SubmissionsEnabled}
+			<a class="menu_item" href="/submit">
+				{SubmitLabel}
+			</a>
+		{/block:SubmissionsEnabled}
+		{block:IfTwitterURL}
+			<a class="menu_item social_link" href="{text:Twitter URL}" target="_blank" rel="nofollow">
+				<svg width="16" height="16">
+					<defs>
+						<title>Twitter</title>
+					</defs>
+					<use xlink:href="#icon-twitter" />
+				</svg>
+			</a>
+		{/block:IfTwitterURL}
+		{block:IfFacebookURL}
+			<a class="menu_item social_link" href="{text:Facebook URL}" target="_blank" rel="nofollow">
+				<svg width="16" height="16">
+					<defs>
+						<title>Facebook</title>
+					</defs>
+					<use xlink:href="#icon-facebook" />
+				</svg>
+			</a>
+		{/block:IfFacebookURL}
+		{block:IfInstagramURL}
+			<a class="menu_item social_link" href="{text:Instagram URL}" target="_blank" rel="nofollow">
+				<svg width="16" height="16">
+					<defs>
+						<title>Instagram</title>
+					</defs>
+					<use xlink:href="#icon-instagram" />
+				</svg>
+			</a>
+		{/block:IfInstagramURL}
+		{block:IfYouTubeURL}
+			<a class="menu_item social_link" href="{text:YouTube URL}" target="_blank" rel="nofollow">
+				<svg width="16" height="16">
+					<defs>
+						<title>YouTube</title>
+					</defs>
+					<use xlink:href="#icon-youtube" />
+				</svg>
+			</a>
+		{/block:IfYouTubeURL}
+		{block:IfPinterestURL}
+			<a class="menu_item social_link" href="{text:Pinterest URL}" target="_blank" rel="nofollow">
+				<svg width="16" height="16">
+					<defs>
+						<title>Pinterest</title>
+					</defs>
+					<use xlink:href="#icon-pinterest" />
+				</svg>
+			</a>
+		{/block:IfPinterestURL}
+		<a class="menu_item social_link" href="{block:IfCustomRSSURL}{text:Custom RSS URL}{/block:IfCustomRSSURL}{block:IfNotCustomRSSURL}{RSS}{/block:IfNotCustomRSSURL}" target="_blank" rel="nofollow">
+			<svg width="16" height="16">
+				<use xlink:href="#icon-rss" />
+			</svg>
+		</a>
+	</nav>
+{/block:IfShowMenu}

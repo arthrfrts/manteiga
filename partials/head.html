@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+  {partial:ThemeOptions}
+
+	<title>{block:PermalinkPage}{block:PostTitle}{PostTitle} ~ {/block:PostTitle}{/block:PermalinkPage}{block:TagPage}{Tag} ~ {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} ~ {/block:SearchPage}{Title}</title>
+	<meta name="description" content="{block:Description}{MetaDescription}{/block:Description}" />
+
+  <link rel="alternate" type="application/rss+xml" href="{block:IfCustomRSSURL}{text:Custom RSS URL}{/block:IfCustomRSSURL}{block:IfNotCustomRSSURL}{RSS}{/block:IfNotCustomRSSURL}" />
+  <link rel="shortcut icon" href="{Favicon}" />
+  <link rel="apple-touch-icon" href="{PortraitURL-128}" />
+  <style type="text/css">
+    :root {
+      --color-text: {color:Text color};
+      --color-background: {color:Content background color};
+      --color-accent: {AccentColor};
+      --color-title: {TitleColor};
+      --color-header: {BackgroundColor};
+
+      --rgb-color-text: {RGBcolor:Text color};
+      --rgb-color-background: {RGBcolor:Content background color};
+      --rgb-color-accent: {RGBAccentColor};
+      --rgb-color-title: {RGBTitleColor};
+      --rgb-color-header: {RGBBackgroundColor};
+
+      --base-font-family: {TitleFont};
+      --body-font-family: {font:Text font};
+      --headings-font-weight: {TitleFontWeight};
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="//dl.dropbox.com/s/pb298uj3qu4glub/screen.css" />
+
+  <style type="text/css">
+		{CustomCSS}
+
+    {block:ShowHeaderImage}
+      .with-image {
+        background-image: url("{HeaderImage}");
+      }
+    {/block:ShowHeaderImage}
+  </style>
+</head>

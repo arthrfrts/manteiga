@@ -1,0 +1,21 @@
+<footer class="colophon">
+	<div class="wrapper">
+		<div class="footer_widgets">
+			{block:Description}
+				<div class="site_description">
+					{Description}
+	      </div>
+      {/block:Description}
+
+			{block:IfFooterWidget}
+      	<div class="custom_widget">
+        	{text:Footer widget}
+      	</div>
+      {/block:IfFooterWidget}
+		</div>
+
+    <p class="site_credits">
+      &copy; <a href="{BlogURL}" rel="index">{Title}</a>{block:IfCopyrightText} ~ {text:Copyright text}{/block:IfCopyrightText}
+    </p>
+  </div>
+</footer>

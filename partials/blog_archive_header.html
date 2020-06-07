@@ -1,0 +1,28 @@
+{block:IndexPage}
+	{block:SearchPage}
+		<header class="archive_header">
+			<h2 class="archive_title">
+				{lang:Search results for SearchQuery 2}
+			</h2>
+		</header>
+	{/block:SearchPage}
+	{block:TagPage}
+		<header class="archive_header">
+			<h2 class="archive_title tag_title">
+				{lang:Posts tagged Tag 2}
+			</h2>
+		</header>
+	{/block:TagPage}
+	{block:DayPage}
+		<header class="archive_header">
+			<h2 class="archive_title day_title">
+				{DayOfMonth}{DayOfMonthSuffix} / {ShortMonth} / {Year}
+			</h2>
+		</header>
+	{/block:DayPage}
+	{block:NoSearchResults}
+		<div class="no_posts">
+			<p>{lang:Sorry no search results found}</p>
+		</div>
+	{/block:NoSearchResults}
+{/block:IndexPage}

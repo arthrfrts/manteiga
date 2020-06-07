@@ -1,0 +1,16 @@
+<h1 class="site_title">
+	<a href="{BlogURL}" rel="index">
+		{block:ShowAvatar}
+			{block:IfLogoImage}
+				<img src="{image:Logo}" alt="{Title}" {block:ShowTitle}role="presentation"{/block:ShowTitle} />
+			{/block:IfLogoImage}
+			{block:IfNotLogoImage}
+				<img src="{PortraitURL-128}" alt="{Title}" {block:ShowTitle}role="presentation"{/block:ShowTitle} />
+			{/block:IfNotLogoImage}
+		{/block:ShowAvatar}
+
+		{block:ShowTitle}
+			{Title}
+		{/block:ShowTitle}
+	</a>
+</h1>
