@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {partial:ThemeOptions}
 
-	<title>{block:PermalinkPage}{block:PostTitle}{PostTitle} ~ {/block:PostTitle}{/block:PermalinkPage}{block:TagPage}{Tag} ~ {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} ~ {/block:SearchPage}{Title}</title>
+	<title>{block:PermalinkPage}{block:PostSummary}{PostSummary} ~ {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag} ~ {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} ~ {/block:SearchPage}{Title}</title>
 	<meta name="description" content="{block:Description}{MetaDescription}{/block:Description}" />
 
   <link rel="alternate" type="application/rss+xml" href="{block:IfCustomRSSURL}{text:Custom RSS URL}{/block:IfCustomRSSURL}{block:IfNotCustomRSSURL}{RSS}{/block:IfNotCustomRSSURL}" />
