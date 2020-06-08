@@ -169,14 +169,22 @@
         flex-flow: row nowrap;
         justify-content: space-between;
 
+		.post_actions {
+			display: inline-flex;
+
+			@include media-query($on-palm) {
+				margin-top: $spacing-unit / 4;
+				margin-left: auto;
+			}
+
+			> * {
+				margin-left: $spacing-unit / 4;
+			}
+		}
+
         @include media-query($on-palm) {
           flex-flow: column nowrap;
           justify-content: flex-start;
-
-          .post_actions {
-            margin-bottom: $spacing-unit / 4;
-            margin-top: $spacing-unit / 4;
-          }
         }
       }
     }
@@ -258,7 +266,7 @@
 }
 
 .post_content {
-  margin-top: $spacing-unit * 2;
+  margin-top: $spacing-unit;
 }
 
 .audio_info {
