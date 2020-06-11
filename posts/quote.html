@@ -1,8 +1,11 @@
-<div class="quote-text {Length}">
-  {Quote}
+<div class="post_content">
+	<blockquote class="quote {Length}">
+		<div class="quoted-text">
+			&ldquo;{Quote}&rdquo;
+		</div>
+	{block:Source}
+		<cite class="quote-source">&mdash; {Source}</cite>
+	{/block:Source}
+	</blockquote>
 </div>
-{block:Source}
-<div class="quote-source">
-  {Source}
-</div>
-{/block:Source}
+

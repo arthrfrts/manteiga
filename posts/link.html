@@ -1,8 +1,15 @@
-<a href="{URL}">
-  <h1 class="post-title">{Name}</h1>
-</a>
-{block:Description}
-<section class="body">
-  {Description}
-</section>
-{/block:Description}
+<div class="post_content">
+	{block:Excerpt}
+		<blockquote class="link_excerpt">
+			<p>{Excerpt}</p>
+
+			{block:Author}
+				<cite class="link_author">&mdash; {Author}</cite>
+			{/block:Author}
+		</blockquote>
+	{/block:Excerpt}
+
+	{block:Description}
+		{Description}
+	{/block:Description}
+</div>

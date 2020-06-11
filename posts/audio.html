@@ -1,0 +1,31 @@
+<div class="audio_container">
+	{block:AudioEmbed}
+		{AudioEmbed-640}
+	{/block:AudioEmbed}
+	{block:AudioPlayer}
+		<div class="audio_info">
+			{block:AlbumArt}
+				<div class="album_art">
+					<img src="{AlbumArtURL}" alt="" role="presentation" />
+				</div>
+			{/block:AlbumArt}
+
+			<div class="player_container">
+				<p class="track_details">
+					{block:TrackName}
+						<span class="track_name">{TrackName}</span>
+					{/block:TrackName}
+					{block:Artist} &mdash; {Artist}{/block:Artist}
+				</p>
+
+				{AudioPlayer}
+			</div>
+		</div>
+	{/block:AudioPlayer}
+</div>
+
+{block:NotReblog}
+	<div class="post_content">
+		{Caption}
+	</div>
+{/block:NotReblog}
