@@ -1,0 +1,54 @@
+{block:Pagination}
+	<nav class="pagination">
+		{block:PreviousPage}
+			<a href="{PreviousPage}" rel="prev">
+				&larr; {lang:Newer posts}
+			</a>
+		{/block:PreviousPage}
+		{block:NextPage}
+			<a href="{NextPage}" rel="next">
+				{lang:Older posts} &rarr;
+			</a>
+		{/block:NextPage}
+
+		<a class="archive_link" href="/archive">
+			({lang:Browse the archive})
+		</a>
+	</nav>
+{/block:Pagination}
+{block:PermalinkPagination}
+	<nav class="pagination">
+		{block:PreviousPost}
+			<a href="{PreviousPost}" rel="prev">
+				&larr; {lang:Previous post}
+			</a>
+		{/block:PreviousPost}
+		{block:NextPost}
+			<a href="{NextPost}" rel="next">
+				{lang:Next post} &rarr;
+			</a>
+		{/block:NextPost}
+
+		<a class="random_link" href="/random">
+			({lang:Random post})
+		</a>
+	</nav>
+{/block:PermalinkPagination}
+{block:DayPagination}
+	<nav class="pagination">
+		{block:PreviousDayPage}
+			<a href="{PreviousDayPage}" rel="prev">
+				&larr; {lang:Previous day}
+			</a>
+		{/block:PreviousDayPage}
+		{block:NextDayPage}
+			<a href="{NextDayPage}" rel="next">
+				{lang:Next day} &rarr;
+			</a>
+		{/block:NextDayPage}
+
+		<a class="archive_link" href="/archive">
+			({lang:Browse the archive})
+		</a>
+	</nav>
+{/block:DayPagination}
