@@ -1,3 +1,5 @@
+# Manteiga
+
 Manteiga is a simple, all-purpose blog theme. It supports all post types and includes a set of versatile theme options, a beautiful sticky sidebar with quick access to your menu items, and two areas for custom content. It's inspired by the design of my own blog, [Pão com Mortadela](https://paomortadela.com.br/).
 
 **Features:**
