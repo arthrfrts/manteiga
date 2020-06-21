@@ -230,6 +230,40 @@
 			}
 		}
 
+		.post_notes {
+			margin-top: $spacing-unit * 3;
+
+			.notes_title {
+				margin-bottom: $spacing-unit;
+				font-weight: $title-font-weight;
+				font-size: 1.8rem;
+			}
+
+			.notes {
+				list-style: none;
+				margin-left: 0;
+
+				.note {
+					margin-top: $spacing-unit / 2;
+					margin-bottom: $spacing-unit / 2;
+					font-size: 1.2rem;
+					font-style: italic;
+
+					.avatar {
+						border-radius: 50%;
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: $spacing-unit / 4;
+					}
+
+					a {
+						font-weight: $title-font-weight;
+						font-style: normal;
+					}
+				}
+			}
+		}
+
 		.post_comments {
 			margin-top: $spacing-unit * 3;
 		}
