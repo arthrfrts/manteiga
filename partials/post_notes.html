@@ -1,10 +1,11 @@
 {block:PermalinkPage}
-	<section class="post_notes" id="notes">
-		<h5 class="notes_title">
-			{lang:It has NoteCount notes}
-		</h5>
-		{block:PostNotes}
+	{block:PostNotes}
+		<section class="post_notes" id="notes">
+			<h5 class="notes_title">
+				{lang:It has NoteCount notes}
+			</h5>
+
 			{PostNotes}
-		{/block:PostNotes}
-	</section>
+		</section>
+	{/block:PostNotes}
 {/block:PermalinkPage}

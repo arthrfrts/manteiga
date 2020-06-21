@@ -5,29 +5,29 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	{block:Hidden}
-		<meta name="image:Logo" />
-		<meta name="color:Text color" content="#4a4a4a" />
-		<meta name="color:Content background color" content="#f6f6f6" />
-		<meta name="font:Text font" content="Baskerville" />
-		<meta name="select:Header decoration" content="none" title="None" />
-		<meta name="select:Header decoration" content="wave" title="Wave" />
-		<meta name="select:Header decoration" content="fade" title="Fade" />
-		<meta name="select:Header decoration" content="bars" title="Bars" />
-		<meta name="if:Show menu" content="1" />
-		<meta name="text:Sidebar widget" />
-		<meta name="text:Footer widget" />
-		<meta name="text:Copyright text" />
-		<meta name="text:Disqus shortname" />
-		<meta name="text:Twitter widget title" content="Tweets" />
-		<meta name="text:Tweets to show" content="6" />
-		<meta name="text:Google Analytics UID" />
-		<meta name="text:Twitter URL" />
-		<meta name="text:Facebook URL" />
-		<meta name="text:YouTube URL" />
-		<meta name="text:Instagram URL" />
-		<meta name="text:Pinterest URL" />
-		<meta name="text:Custom RSS URL" />
-	{/block:Hidden}
+  <meta name="image:Logo" />
+  <meta name="color:Text color" content="#4a4a4a" />
+  <meta name="color:Content background color" content="#f6f6f6" />
+  <meta name="font:Text font" content="Baskerville" />
+  <meta name="select:Header decoration" content="none" title="None" />
+  <meta name="select:Header decoration" content="wave" title="Wave" />
+  <meta name="select:Header decoration" content="fade" title="Fade" />
+  <meta name="select:Header decoration" content="bars" title="Bars" />
+  <meta name="if:Show menu" content="1" />
+  <meta name="text:Sidebar widget" />
+  <meta name="text:Footer widget" />
+  <meta name="text:Copyright text" />
+  <meta name="text:Disqus shortname" />
+  <meta name="text:Twitter widget title" content="Tweets" />
+  <meta name="text:Tweets to show" content="6" />
+  <meta name="text:Google Analytics UID" />
+  <meta name="text:Twitter URL" />
+  <meta name="text:Facebook URL" />
+  <meta name="text:YouTube URL" />
+  <meta name="text:Instagram URL" />
+  <meta name="text:Pinterest URL" />
+  <meta name="text:Custom RSS URL" />
+{/block:Hidden}
 
 
 	<title>{block:PermalinkPage}{block:PostSummary}{PostSummary} ~ {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag} ~ {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} ~ {/block:SearchPage}{Title}</title>
@@ -589,14 +589,15 @@
 </footer>
 
 								{block:PermalinkPage}
-	<section class="post_notes" id="notes">
-		<h5 class="notes_title">
-			{lang:It has NoteCount notes}
-		</h5>
-		{block:PostNotes}
+	{block:PostNotes}
+		<section class="post_notes" id="notes">
+			<h5 class="notes_title">
+				{lang:It has NoteCount notes}
+			</h5>
+
 			{PostNotes}
-		{/block:PostNotes}
-	</section>
+		</section>
+	{/block:PostNotes}
 {/block:PermalinkPage}
 
 								{block:Date}
@@ -772,8 +773,8 @@
 
 		</div>
 
-		<script src="//static.tumblr.com/i99f53r/6C4qbj49a/jquery.js"></script>
-		<script src="//static.tumblr.com/i99f53r/9Dbqc96gq/scripts.js"></script>
+	<script src="//static.tumblr.com/i99f53r/6C4qbj49a/jquery.js"></script>
+	<script src="//static.tumblr.com/i99f53r/9Dbqc96gq/scripts.js"></script>
 
 {block:IndexPage}
 	{block:Twitter}
