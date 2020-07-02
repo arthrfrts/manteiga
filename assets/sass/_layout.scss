@@ -452,6 +452,8 @@
 			.menu {
 				display: flex;
 				flex-flow: column nowrap;
+				max-height: 100vh;
+				overflow-y: scroll;
 
 				@include media-query($on-palm) {
 					display: none;
