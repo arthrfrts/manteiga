@@ -428,7 +428,7 @@
 		.fixed_menu {
 			margin-top: $spacing-unit;
 			position: sticky;
-			top: $spacing-unit;
+			top: $spacing-unit * 3;
 			text-align: right;
 
 			@include media-query($on-palm) {
