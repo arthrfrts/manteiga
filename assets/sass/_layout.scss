@@ -56,7 +56,7 @@
 		}
 
 		a {
-			color: $color-background;
+			color: $color-title;
 			text-decoration: none;
 		}
 	}
@@ -85,6 +85,7 @@
 		}
 
 		a {
+			color: $color-title;
 			text-decoration: none;
 			display: inline-block;
 			flex: 0 0 auto;
