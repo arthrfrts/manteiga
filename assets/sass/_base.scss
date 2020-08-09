@@ -273,7 +273,7 @@ input[type="email"],
 input[type="search"],
 textarea {
 	-webkit-appearance: none;
-	background: transparent;
+	background-color: transparent;
 	border: none;
 	border-bottom: 3px dashed rgba($color-text-rgb, 0.2);
 	border-radius: 0;
@@ -283,6 +283,7 @@ textarea {
 	font-family: $base-font-family;
 	width: 100%;
 	transition: border-bottom-color 250ms linear;
+	color: inherit;
 
 	&:focus,
 	&:active {

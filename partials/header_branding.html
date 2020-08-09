@@ -2,10 +2,10 @@
 	<a href="{BlogURL}" rel="index">
 		{block:ShowAvatar}
 			{block:IfLogoImage}
-				<img src="{image:Logo}" alt="{Title}" {block:ShowTitle}role="presentation"{/block:ShowTitle} />
+				<img src="{image:Logo}" alt="{block:HideTitle}{Title}{/block:HideTitle}" />
 			{/block:IfLogoImage}
 			{block:IfNotLogoImage}
-				<img src="{PortraitURL-128}" alt="{Title}" {block:ShowTitle}role="presentation"{/block:ShowTitle} />
+				<img src="{PortraitURL-128}" alt="{block:HideTitle}{Title}{/block:HideTitle}" />
 			{/block:IfNotLogoImage}
 		{/block:ShowAvatar}
 

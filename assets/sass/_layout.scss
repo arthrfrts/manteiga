@@ -19,7 +19,7 @@
 }
 
 .wrapper {
-	max-width: calc(#{$content-width} - #{$spacing-unit});
+	max-width: calc(#{$content-width} + #{$spacing-unit});
 	padding-left: $spacing-unit / 2;
 	padding-right: $spacing-unit / 2;
 	margin-left: auto;
@@ -62,12 +62,12 @@
 	}
 
 	.site_menu {
-		margin-top: $spacing-unit / 4;
-		margin-bottom: $spacing-unit;
+		margin-top: $spacing-unit;
+		padding-bottom: $spacing-unit;
 		display: flex;
 		flex-flow: row wrap;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
 		text-transform: uppercase;
 		font-weight: 600;
 		letter-spacing: 0.1em;
@@ -75,13 +75,19 @@
 
 		@include media-query($on-palm) {
 			flex-flow: row nowrap;
-			padding: $spacing-unit / 2;
-			margin-left: -$spacing-unit / 2;
-			margin-right: -$spacing-unit / 2;
+			justify-content: flex-start;
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
 			-ms-overflow-style: -ms-autohiding-scrollbar;
-			justify-content: flex-start;
+			margin-left: -$spacing-unit / 2;
+			margin-right: -$spacing-unit / 2;
+
+			&::before,
+			&::after {
+				content: " ";
+				margin: auto;
+				min-width: calc(#{$spacing-unit} / 2);
+			}
 		}
 
 		a {
@@ -125,18 +131,20 @@
 
 	& > .wrapper {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
+		width: 100%;
 
-		@include media-query($on-laptop) {
-			display: block;
+		@include media-query($on-palm) {
+			flex-flow: column nowrap;
 		}
 
 		.blog {
-			width: 100%;
-			max-width: 700px;
+			max-width: calc(#{100%} - #{300px + $spacing-unit});
+			margin-right: $spacing-unit;
 
-			@include media-query($on-laptop) {
+			@include media-query($on-palm) {
 				max-width: 100%;
+				margin-right: 0;
 			}
 		}
 	}
@@ -303,6 +311,12 @@
 
 .post_content {
 	margin-top: $spacing-unit;
+
+	a {
+		text-decoration: underline;
+		text-decoration-style: wavy;
+		text-decoration-color: $color-accent;
+	}
 }
 
 .audio_info {
@@ -381,14 +395,18 @@
 	position: relative;
 
 	.sidebar {
-		flex: 0 0 300px;
-		margin-left: $spacing-unit * 2;
+		flex-basis: 300px;
+		flex: 1;
 		font-size: 1.4rem;
 
 		@include media-query($on-palm) {
 			margin-left: 0;
 			margin-top: $spacing-unit * 2;
 			margin-bottom: $spacing-unit * 2;
+		}
+
+		.sidebar_widget {
+			margin-bottom: $spacing-unit;
 		}
 
 		.links {
@@ -460,6 +478,7 @@
 					display: none;
 					padding: $spacing-unit / 2;
 					background-color: $color-accent;
+					color: $color-background;
 
 					a {
 						color: $color-background;
@@ -478,8 +497,11 @@
 				}
 
 				input[type="search"] {
-					background: $color-background;
 					width: 100%;
+
+					@include media-query($on-palm) {
+						border-bottom-color: $color-background;
+					}
 				}
 			}
 
