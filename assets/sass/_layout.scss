@@ -141,6 +141,7 @@
 		.blog {
 			max-width: calc(#{100%} - #{300px + $spacing-unit});
 			margin-right: $spacing-unit;
+			flex: 1 1 auto;
 
 			@include media-query($on-palm) {
 				max-width: 100%;
@@ -472,7 +473,7 @@
 				display: flex;
 				flex-flow: column nowrap;
 				max-height: 100vh;
-				overflow-y: scroll;
+				overflow-y: auto;
 
 				@include media-query($on-palm) {
 					display: none;
@@ -490,7 +491,8 @@
 					}
 				}
 
-				form, a {
+				form,
+				a {
 					display: inline-block;
 					margin-top: $spacing-unit / 4;
 					margin-bottom: $spacing-unit / 4;

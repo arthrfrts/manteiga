@@ -22,11 +22,23 @@ body {
 	overflow-x: hidden;
 }
 
-
 // Resets some basic styling
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
 	margin: 0;
 	padding: 0;
 }
@@ -38,14 +50,28 @@ dl, dd, ol, ul, figure {
 .post_content {
 	font-size: 1.8rem;
 
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		margin-top: $spacing-unit / 2;
 		margin-bottom: $spacing-unit / 2;
 	}
 
-	h1, h2, h3, h5, h6, h6,
-	p, ul, ol, dl,
-	pre, table {
+	h1,
+	h2,
+	h3,
+	h5,
+	h6,
+	h6,
+	p,
+	ul,
+	ol,
+	dl,
+	pre,
+	table {
 		&:not(.full-width) {
 			padding-left: 3rem;
 			padding-right: 5rem;
@@ -57,31 +83,39 @@ dl, dd, ol, ul, figure {
 		}
 	}
 
-	p, ul, ol, dl,
-	blockquote, pre,
-	figure, iframe {
+	p,
+	ul,
+	ol,
+	dl,
+	blockquote,
+	pre,
+	figure,
+	iframe {
 		margin-bottom: $spacing-unit;
 	}
 
-	p, ul, ol, dl,
+	p,
+	ul,
+	ol,
+	dl,
 	blockquote {
 		font-family: $body-font-family;
 	}
 }
 
 // Blockquotes
-blockquote {
-	font-weight: 700;
+blockquote,
+.npf_quote,
+.npf_indented {
 	font-style: italic;
-	text-align: right;
-	color: $color-accent;
 
 	@include media-query($on-palm) {
 		padding-left: $spacing-unit;
 		padding-right: $spacing-unit;
 	}
 
-	&.pull {
+	&.pull,
+	&:first-child {
 		float: right;
 		max-width: 360px;
 		margin-left: $spacing-unit * 2;
@@ -93,16 +127,20 @@ blockquote {
 		}
 	}
 
-	&:not(.pull) {
-		border-left: 3px solid $color-accent;
-		border-right: 3px solid $color-accent;
+	&:not(.pull),
+	&:not(.first-child),
+	&:not(.link_excerpt) {
+		border-left: 3px dashed rgba($color-text-rgb, 0.2);
+		border-right: 3px dashed rgba($color-text-rgb, 0.2);
+		padding-left: $spacing-unit * 1.5;
+		padding-right: $spacing-unit & 1.5;
+		color: rgba($color-text-rgb, 0.65);
 	}
 
 	&.link_excerpt {
 		font-weight: normal;
 		text-align: left;
-		font-size: 1.2rem;
-		color: rgba($color-text-rgb, 0.7);
+		font-size: 1rem;
 		border: 1px dashed rgba($color-text-rgb, 0.7);
 		padding: $spacing-unit $spacing-unit / 2;
 
@@ -115,15 +153,6 @@ blockquote {
 		text-align: center;
 	}
 
-	p, ul, ol {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	ul, ol {
-		list-style: none;
-	}
-
 	cite {
 		font: #{400} #{1.4rem}/#{1.5} $base-font-family;
 		color: rgba($color-text-rgb, 0.7);
@@ -131,15 +160,24 @@ blockquote {
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	line-height: 1.45;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-weight: normal;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
 	font-weight: bolder;
 }
 
@@ -171,13 +209,16 @@ h6 {
 
 // Lists
 
-ul, ol, dl {
+ul,
+ol,
+dl {
 	margin-left: $spacing-unit;
 }
 
 ul,
 ol {
-	ul, ol {
+	ul,
+	ol {
 		margin-bottom: 0;
 	}
 
@@ -225,7 +266,9 @@ img {
 	width: 100%;
 }
 
-iframe, video, object,
+iframe,
+video,
+object,
 .tumblr_video_container {
 	max-width: 100%;
 	margin-bottom: $spacing-unit;
@@ -336,7 +379,9 @@ img {
 	width: 100%;
 }
 
-iframe, video, object {
+iframe,
+video,
+object {
 	max-width: 100%;
 
 	&.full-width {
