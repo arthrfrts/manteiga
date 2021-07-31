@@ -1,48 +1,26 @@
 <!DOCTYPE html>
-<html lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}{block:Korean}ko{/block:Korean}
-	">
+{block:Options}
+	<meta name="image:Logo" />
+	<meta name="color:Text Color" content="#4a4a4a" />
+	<meta name="color:Content Background Color" content="#f6f6f6" />
+	<meta name="font:Text Font" content="Baskerville" />
+	<meta name="select:Header Decoration" content="none" title="None" />
+	<meta name="select:Header Decoration" content="wave" title="Wave" />
+	<meta name="select:Header Decoration" content="fade" title="Fade" />
+	<meta name="select:Header Decoration" content="bars" title="Bars" />
+	<meta name="if:Show Navigation" content="1" />
+	<meta name="text:Widget" />
+	<meta name="text:Copyright Text" />
+	<meta name="text:Disqus Shortname" />
+	<meta name="text:Twitter Widget Title" content="Tweets" />
+	<meta name="text:Tweets To Show" content="6" />
+{/block:Options}
+<html lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}{block:Korean}ko{/block:Korean}">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		{block:Hidden}
-			<meta name="image:Logo" />
-			<meta name="color:Text Color" content="#4a4a4a" />
-			<meta name="color:Content Background Color" content="#f6f6f6" />
-			<meta name="font:Text Font" content="Baskerville" />
-			<meta name="select:Header Decoration" content="none" title="None" />
-			<meta name="select:Header Decoration" content="wave" title="Wave" />
-			<meta name="select:Header Decoration" content="fade" title="Fade" />
-			<meta name="select:Header Decoration" content="bars" title="Bars" />
-			<meta name="if:Show Navigation" content="1" />
-			<meta name="text:Widget" />
-			<meta name="text:Copyright Text" />
-			<meta name="text:Disqus shortname" />
-			<meta name="text:Twitter Widget Title" content="Tweets" />
-			<meta name="text:Tweets To Show" content="6" />
-		{/block:Hidden}
-		<title>{block:PermalinkPage}
-		    {block:Posts}
-		        {block:Text}
-		            {block:Title}{Title}{/block:Title}
-		        {/block:Text}
-		        {block:Photo}
-		            {block:PostSummary}{PostSummary}{/block:PostSummary}
-		        {/block:Photo}
-		        {block:Link}
-		            {block:PostSummary}{PostSummary}{/block:PostSummary}
-		        {/block:Link}
-		        {block:Quote}
-		            {block:PostSummary}{PostSummary}{/block:PostSummary}
-		        {/block:Quote}
-		        {block:Video}
-		            {block:PostSummary}{PostSummary}{/block:PostSummary}
-		        {/block:Video}
-		        {block:Audio}
-		            {block:PostSummary}{PostSummary}{/block:PostSummary}
-		        {/block:Audio}
-		    {/block:Posts}
-		 ~ {/block:PermalinkPage}{block:TagPage}{Tag} ~ {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} ~ {/block:SearchPage}{Title}</title>
-		<meta name="description" content="{block:Description}{MetaDescription}{/block:Description}" />
+		<title>{block:PostSummary}{PostSummary} ~ {/block:PostSummary}{block:SearchPage}{lang:SearchResultCount results for SearchQuery}{block:NoSearchResults}{lang:No results found}{/block:NoSearchResults} ~ {/block:SearchPage}{block:TagPage}{lang:Posts tagged Tag} ~ {/block:TagPage}{block:DayPage}{lang:Viewing everything posted on Month DayOfMonth Year} ~ {/block:DayPage}{Title}</title>
+		<meta name="description" content="{MetaDescription}" />
 		<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 		<link rel="shortcut icon" href="{Favicon}" />
 		<link rel="apple-touch-icon" href="{PortraitURL-128}" />
@@ -483,12 +461,6 @@
 										{block:Video}
 											<span class="info play_count">{PlayCountWithLabel}</span>
 										{/block:Video}
-										{block:RebloggedFrom}
-											<a class="info via" href="{ReblogParentURL}">{lang:Via}</a>
-										{/block:RebloggedFrom}
-										{block:ContentSource}
-											<a class="info source" href="{SourceUR}">{lang:Source}</a>
-										{/block:ContentSource}
 										{block:IndexPage}
 											{block:NoteCount}
 												<a class="info note_count" href="{Permalink}#notes">{lang:Notes}<sup>({NoteCount})</sup></a>
@@ -594,11 +566,11 @@
 						{/block:DayPagination}
 					</div>
 						<aside class="sidebar">
-							{block:IfSidebarWidget}
+							{block:IfWidget}
 								<div class="sidebar_widget">
-									{text:Sidebar Widget}
+									{text:Widget}
 								</div>
-							{/block:IfSidebarWidget}
+							{/block:IfWidget}
 							{block:IfTwitterWidgetTitle}
 								{block:Twitter}
 									<div class="links" id="twitter" style="display:none;">
@@ -669,14 +641,13 @@
 				</div>
 			</footer>
 		</div>
-		<script src="//static.tumblr.com/i99f53r/6C4qbj49a/jquery.js"></script>
-		<script src="//static.tumblr.com/i99f53r/Veoqert89/scripts.js"></script>
+		<script type="text/javascript" src="https://static.tumblr.com/i99f53r/fiJqx17u3/scripts.js"></script>
 		{block:IndexPage}
 			{block:Twitter}
 				<script type="text/javascript" src="/tweets.js"></script>
 			{/block:Twitter}
 			{block:IfDisqusShortname}
-				<script id="dsq-count-scr" async await src="//{text:Disqus shortName}.disqus.com/count.js"></script>
+				<script id="dsq-count-scr" async await src="//{text:Disqus Shortname}.disqus.com/count.js"></script>
 			{/block:IfDisqusShortname}
 		{/block:IndexPage}
 	</body>
