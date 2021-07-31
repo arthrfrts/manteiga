@@ -1,0 +1,13 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nsass Manteiga.scss:screen.css --no-source-map --style=compressed"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nsass --watch Manteiga.scss:screen.css --no-source-map"
+    }
+  },
+  "identifier" : "3EC67EBF-4C92-4636-9330-C53AF6033714"
+}
