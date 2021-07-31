@@ -1,654 +1,654 @@
 <!DOCTYPE html>
 {block:Options}
-	<meta name="image:Logo" />
-	<meta name="color:Text Color" content="#4a4a4a" />
-	<meta name="color:Content Background Color" content="#f6f6f6" />
-	<meta name="font:Text Font" content="Baskerville" />
-	<meta name="select:Header Decoration" content="none" title="None" />
-	<meta name="select:Header Decoration" content="wave" title="Wave" />
-	<meta name="select:Header Decoration" content="fade" title="Fade" />
-	<meta name="select:Header Decoration" content="bars" title="Bars" />
-	<meta name="if:Show Navigation" content="1" />
-	<meta name="text:Widget" />
-	<meta name="text:Copyright Text" />
-	<meta name="text:Disqus Shortname" />
-	<meta name="text:Twitter Widget Title" content="Tweets" />
-	<meta name="text:Tweets To Show" content="6" />
+    <meta name="image:Logo" />
+    <meta name="color:Text Color" content="#4a4a4a" />
+    <meta name="color:Content Background Color" content="#f6f6f6" />
+    <meta name="font:Text Font" content="Baskerville" />
+    <meta name="select:Header Decoration" content="none" title="None" />
+    <meta name="select:Header Decoration" content="wave" title="Wave" />
+    <meta name="select:Header Decoration" content="fade" title="Fade" />
+    <meta name="select:Header Decoration" content="bars" title="Bars" />
+    <meta name="if:Show Navigation" content="1" />
+    <meta name="text:Widget" />
+    <meta name="text:Copyright Text" />
+    <meta name="text:Disqus Shortname" />
+    <meta name="text:Twitter Widget Title" content="Tweets" />
+    <meta name="text:Tweets To Show" content="6" />
 {/block:Options}
 <html lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}{block:Korean}ko{/block:Korean}">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{block:PostSummary}{PostSummary} ~ {/block:PostSummary}{block:SearchPage}{lang:SearchResultCount results for SearchQuery}{block:NoSearchResults}{lang:No results found}{/block:NoSearchResults} ~ {/block:SearchPage}{block:TagPage}{lang:Posts tagged Tag} ~ {/block:TagPage}{block:DayPage}{lang:Viewing everything posted on Month DayOfMonth Year} ~ {/block:DayPage}{Title}</title>
-		<meta name="description" content="{MetaDescription}" />
-		<link rel="alternate" type="application/rss+xml" href="{RSS}" />
-		<link rel="shortcut icon" href="{Favicon}" />
-		<link rel="apple-touch-icon" href="{PortraitURL-128}" />
-		<style type="text/css">
-			:root {
-				--color-text: {color:Text Color};
-				--color-background: {color:Content Background Color};
-				--color-accent: {AccentColor};
-				--color-title: {TitleColor};
-				--color-header: {BackgroundColor};
-				--rgb-color-text: {RGBcolor:Text Color};
-				--rgb-color-background: {RGBcolor:Content Background Color};
-				--rgb-color-accent: {RGBAccentColor};
-				--rgb-color-title: {RGBTitleColor};
-				--rgb-color-header: {RGBBackgroundColor};
-				--base-font-family: {TitleFont};
-				--body-font-family: {font:Text Font};
-				--headings-font-weight: {TitleFontWeight};
-			}
-		</style>
-		<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/i99f53r/wkBqwyv1h/screen.css" />
-		<style type="text/css">
-			{block:ShowHeaderImage}
-				.with-image {
-					background-image: url("{HeaderImage}");
-				}
-			{/block:ShowHeaderImage}
-			{CustomCSS}
-		</style>
-	</head>
-	<body>
-		<svg style="width: 0; height: 0; position: absolute; z-index: -5;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<defs>
-				<symbol width="1250" height="67" id="transition-fade" viewBox="0 0 1250 67" >
-					<defs>
-						<linearGradient id="a" gradientUnits="userSpaceOnUse" x1="625" y1="67" x2="625" y2="0">
-							<stop offset="0" stop-color="{color:Content background color}" />
-							<stop offset="1" stop-color="{color:Content background color}" stop-opacity="0" />
-						</linearGradient>
-					</defs>
-					<path d="M0 67h1250V0H0z" fill="url(#a)" />
-				</symbol>
-				<symbol width="1250" height="68" id="transition-wave" viewBox="0 -1 1250 68">
-					<path d="M0 3.938c149.16-12.371 257.603 7.141 349.24 20.82 125.65 18.707 219.387 36.308 339.135 36.509 84.934.101 176.671-11.868 262.105-21.825 149.66-17.4 234.594-15.69 299.52-10.359V67H0z" fill="{color:Content background color}" />
-				</symbol>
-				<symbol id="transition-bars" width="1250px" height="67px" viewBox="0 0 1250 67">
-					<path d="M0 67 L0 61 38 61 38 64 76 64 76 66 114 66 114 63 152 63 152 60 190 60 190 52 228 52 228 44 266 44 266 33 304 33 304 24 342 24 342 10 380 10 380 0 418 0 418 18 456 18 456 44 494 44 494 50 532 50 532 55 570 55 570 60 608 60 646 60 646 45 684 45 684 50 722 50 722 38 760 38 760 42 798 42 798 52 836 52 836 45 874 45 874 42 912 42 912 38 950 38 950 33 988 33 988 28 1026 28 1026 18 1064 18 1064 24 1102 24 1102 28 1140 28 1140 24 1178 24 1178 28 1216 28 1216 33 1250 33 1250 67 1216 67 1212 67 1178 67 1140 67 1102 67 1064 67 1026 67 988 67 950 67 912 67 874 67 836 67 798 67 760 67 722 67 684 67 646 67 608 67 570 67 532 67 494 67 456 67 418 67 380 67 342 67 304 67 266 67 228 67 190 67 152 67 114 67 76 67 38 67 0 67 Z" fill="{color:Content background color}" fill-opacity="1" stroke="none"/>
-				</symbol>
-				<symbol id="icon-rss" viewBox="0 0 24 24">
-					<title>RSS</title>
-					<path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
-				</symbol>
-				<symbol id="icon-twitter" viewBox="0 0 24 24">
-					<title>Twitter</title>
-					<path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
-				</symbol>
-			</defs>
-		</svg>
-		<div id="site">
-			<header class="masthead {block:ShowHeaderImage}with-image{/block:ShowHeaderImage}">
-				<div class="wrapper">
-					<h1 class="site_title">
-						<a href="{BlogURL}" rel="index">
-							{block:ShowAvatar}
-								{block:IfLogoImage}
-									<img src="{image:Logo}" alt="{block:HideTitle}{Title}{/block:HideTitle}" />
-								{/block:IfLogoImage}
-								{block:IfNotLogoImage}
-									<img src="{PortraitURL-128}" alt="{block:HideTitle}{Title}{/block:HideTitle}" />
-								{/block:IfNotLogoImage}
-							{/block:ShowAvatar}
-							{block:ShowTitle}
-								{Title}
-							{/block:ShowTitle}
-						</a>
-					</h1>
-					{block:IfShowNavigation}
-						<nav class="site_menu">
-							{block:AskEnabled}
-								<a class="menu_item" href="/ask">
-									{AskLabel}
-								</a>
-							{/block:AskEnabled}
-							{block:SubmissionsEnabled}
-								<a class="menu_item" href="/submit">
-									{SubmitLabel}
-								</a>
-							{/block:SubmissionsEnabled}
-							{block:HasPages}
-								{block:Pages}
-									<a class="menu_item" href="{URL}">
-										{Label}
-									</a>
-								{/block:Pages}
-							{/block:HasPages}
-							{block:Twitter}
-								<a class="menu_item social_link" href="https://twitter.com/{TwitterUsername}" target="_blank" rel="nofollow">
-									<svg width="16" height="16">
-										<defs>
-											<title>Twitter</title>
-										</defs>
-										<use xlink:href="#icon-twitter" />
-									</svg>
-								</a>
-							{/block:Twitter}
-							<a class="menu_item social_link" href="{RSS}" target="_blank" rel="alternate">
-								<svg width="16" height="16">
-									<use xlink:href="#icon-rss" />
-								</svg>
-							</a>
-						</nav>
-					{/block:IfShowNavigation}
-				</div>
-				<svg viewBox="0 0 1250 68" class="transition {select:Header Decoration}">
-					<use xlink:href="#transition-{select:Header Decoration}" />
-				</svg>
-			</header>
-			<main class="easel">
-				<div class="wrapper">
-					<div class="blog">
-						{block:IndexPage}
-							{block:SearchPage}
-								<header class="archive_header">
-									<h2 class="archive_title">
-										{lang:Search results for SearchQuery 2}
-									</h2>
-								</header>
-							{/block:SearchPage}
-							{block:TagPage}
-								<header class="archive_header">
-									<h2 class="archive_title tag_title">
-										{lang:Posts tagged Tag 2}
-									</h2>
-								</header>
-							{/block:TagPage}
-							{block:DayPage}
-								<header class="archive_header">
-									<h2 class="archive_title day_title">
-										{DayOfMonth}{DayOfMonthSuffix} / {ShortMonth} / {Year}
-									</h2>
-								</header>
-							{/block:DayPage}
-							{block:NoSearchResults}
-								<div class="no_posts">
-									<p>{lang:Sorry no search results found}</p>
-								</div>
-							{/block:NoSearchResults}
-						{/block:IndexPage}
-						{block:Posts inlineMediaWidth="1020" inlineNestedMediaWidth="1020"}
-							<article class="{block:Date}post {/block:Date}{PostType}{block:PermalinkPage} single{/block:PermalinkPage}"{block:Date} data-post-id="{PostID}"{/block:Date}>
-								<header class="post_header">
-									{block:Text}
-										{block:Title}
-											{block:IndexPage}
-												<h2 class="post_title">
-													<a href="{Permalink}" rel="bookmark">{Title}</a>
-												</h2>
-											{/block:IndexPage}
-											{block:PermalinkPage}
-												<h1 class="post_title">
-													{Title}
-												</h1>
-											{/block:PermalinkPage}
-										{/block:Title}
-									{/block:Text}
-									{block:Link}
-										{block:IndexPage}
-											<h2 class="post_title">
-												<a href="{URL}" rel="{Target}">{Name} &rarr;</a>
-											</h2>
-										{/block:IndexPage}
-										{block:PermalinkPage}
-											<h1 class="post_title">
-												<a href="{URL}" rel="{Target}">{Name} &rarr;</a>
-											</h1>
-										{/block:PermalinkPage}
-									{/block:Link}
-									{block:Chat}
-										{block:IndexPage}
-											<h2 class="post_title">
-												<a href="{Permalink}" rel="boolmark">{Title}</a>
-											</h2>
-										{/block:IndexPage}
-										{block:PermalinkPage}
-											<h1 class="post_title">
-												{Title}
-											</h1>
-										{/block:PermalinkPage}
-									{/block:Chat}
-									{block:Date}
-										<div class="post_meta">
-											<p class="post_info">
-												{block:Link}
-													{block:Host}
-														<span class="info link_host">({Host})</span>
-													{/block:Host}
-												{/block:Link}
-												<a class="info post_author {PostAuthorName}" href="{PostAuthorURL}" rel="author">{PostAuthorTitle}</a>
-												<a class="info post_date" href="{Permalink}" rel="bookmark">
-													<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
-												</a>
-												{block:IndexPage}
-													{block:IfDisqusShortname}
-														<a class="info comment_count" href="{Permalink}#disqus_thread">{lang:View comments}</a>
-													{/block:IfDisqusShortname}
-												{/block:IndexPage}
-											</p>
-											{block:PermalinkPage}
-												<div class="post_actions">
-													{ReblogButton}
-													{LikeButton}
-												</div>
-											{/block:PermalinkPage}
-										</div>
-									{/block:Date}
-								</header>
-								{block:Photo}
-									<figure class="photo">
-										{LinkOpenTag}
-											<img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}" />
-										{LinkCloseTag}
-										{block:NotReblog}
-											{block:Caption}
-												<figcaption class="post_content">
-													{Caption}
-												</figcaption>
-											{/block:Caption}
-										{/block:NotReblog}
-									</figure>
-								{/block:Photo}
-								{block:Answer}
-									<section class="question_and_answer">
-										<header class="question">
-											<div class="question_info">
-												<img class="portrait" src="{AskerPortraitURL-64}" width="32" height="32" role="presentation" alt="" align="left" />
-												<p class="asker">
-													{Asker}:
-												</p>
-											</div>
-											<h5 class="q">{Question}</h5>
-										</header>
-										{block:Answerer}
-											<div class="answer">
-												<div class="answerer_info">
-													<img class="portrait" src="{AnswererPortraitURL-64}" width="32" height="32" role="presentation" alt="" align="left" />
-													<p class="asnwerer">
-														{Answerer}:
-													</p>
-												</div>
-												<div class="a">
-													{Answer}
-												</div>
-											</div>
-										{/block:Answerer}
-										{block:NotReblog}
-											<div class="post_content replies">
-												{Replies}
-											</div>
-										{/block:NotReblog}
-										{block:RebloggedFrom}
-											<div class="post_content reblog_list">
-												{block:Reblogs}
-													<section class="reblog_entry{block:isOriginalEntry} original{/block:isOriginalEntry}">
-														<div class="reblog_content">
-															{Body}
-														</div>
-														<header class="reblog_header">
-															<div class="reblog_info">
-																<img class="portrait" src="{PortraitURL-64}" width="32" height="32" alt="{Username}" role="presentation" align="left" />
-																<p class="reblogged_from">
-																	{lang:Reblogged from}<br />
-																	{block:HasPermalink}
-																		<a href="{Permalink}" rel="author">
-																			{Username}
-																		</a>
-																	{/block:HasPermalink}
-																	{block:HasNoPermalink}
-																		<span class="desactivated">
-																			{Username}
-																		</span>
-																	{/block:HasNoPermalink}
-																</p>
-															</div>
-														</header>
-													</section>
-												{/block:Reblogs}
-											</div>
-										{/block:RebloggedFrom}
-									</section>
-								{/block:Answer}
-								{block:Text}
-									{block:NotReblog}
-										<div class="post_content">
-											{Body}
-										</div>
-									{/block:NotReblog}
-								{/block:Text}
-								{block:Link}
-									<div class="post_content">
-										{block:Excerpt}
-											<blockquote class="link_excerpt">
-												<p>{Excerpt}</p>
-												{block:Author}
-													<cite class="link_author">&mdash; {Author}</cite>
-												{/block:Author}
-											</blockquote>
-										{/block:Excerpt}
-										{block:Description}
-											{Description}
-										{/block:Description}
-									</div>
-								{/block:Link}
-								{block:Audio}
-									<div class="audio_container">
-										{block:AudioEmbed}
-											{AudioEmbed-640}
-										{/block:AudioEmbed}
-										{block:AudioPlayer}
-											<div class="audio_info">
-												{block:AlbumArt}
-													<div class="album_art">
-														<img src="{AlbumArtURL}" alt="" role="presentation" />
-													</div>
-												{/block:AlbumArt}
-												<div class="player_container">
-													<p class="track_details">
-														{block:TrackName}
-															<span class="track_name">{TrackName}</span>
-														{/block:TrackName}
-														{block:Artist} &mdash; {Artist}{/block:Artist}
-													</p>
-													{AudioPlayer}
-												</div>
-											</div>
-										{/block:AudioPlayer}
-									</div>
-									{block:NotReblog}
-										<div class="post_content">
-											{Caption}
-										</div>
-									{/block:NotReblog}
-								{/block:Audio}
-								{block:Video}
-									<figure class="video_block{block:Caption} with_caption{/block:Caption}">
-										<div class="video_wrapper">
-											{Video-700}
-										</div>
-										{block:NotReblog}
-											{block:Caption}
-												<figcaption class="post_content">
-													{Caption}
-												</figcaption>
-											{/block:Caption}
-										{/block:NotReblog}
-									</figure>
-								{/block:Video}
-								{block:Photoset}
-									<figure class="photo photoset">
-										{Photoset}
-										{block:NotReblog}
-											{block:Caption}
-												<figcaption class="post_content">
-													{Caption}
-												</figcaption>
-											{/block:Caption}
-										{/block:NotReblog}
-									</figure>
-								{/block:Photoset}
-								{block:Quote}
-									<div class="post_content">
-										<blockquote class="quote {Length}">
-											<div class="quoted-text">
-												&ldquo;{Quote}&rdquo;
-											</div>
-											{block:Source}
-												<cite class="quote-source">&mdash; {Source}</cite>
-											{/block:Source}
-										</blockquote>
-									</div>
-								{/block:Quote}
-								{block:Panorama}
-									<figure class="photo panorama">
-										{LinkOpenTag}
-											<img src="{PhotoURL-Panorama}" width="{PhotoWidth-Panorama}" height="{PhotoHeight-Panorama}" alt="{PhotoAlt}" />
-										{LinkCloseTag}
-										{block:NotReblog}
-											{block:Caption}
-												<figcaption class="post_content">
-													{Caption}
-												</figcaption>
-											{/block:Caption}
-										{/block:NotReblog}
-									</figure>
-								{/block:Panorama}
-								{block:Chat}
-									<div class="post_content">
-										<ul class="chat">
-											{block:Lines}
-												<li class="{Alt} user_{UserNumber}">
-													{block:Label}<strong class="speaker">{Label}</strong>{/block:Label}
-													<span class="says">{Line}</span>
-												</li>
-											{/block:Lines}
-										</ul>
-									</div>
-								{/block:Chat}
-								{block:RebloggedFrom}
-									<div class="post_content reblog_list">
-										{block:Reblogs}
-											<section class="reblog_entry{block:isOriginalEntry} original{/block:isOriginalEntry}">
-												<div class="reblog_content">
-													{Body}
-												</div>
-												<header class="reblog_header">
-													<div class="reblog_info">
-														<img class="portrait" src="{PortraitURL-64}" width="32" height="32" alt="{Username}" role="presentation" align="left" />
-														<p class="reblogged_from">
-															{lang:Reblogged from}<br />
-															{block:HasPermalink}
-																<a href="{Permalink}" rel="author">
-																	{Username}
-																</a>
-															{/block:HasPermalink}
-															{block:HasNoPermalink}
-																<span class="desactivated">
-																	{Username}
-																</span>
-															{/block:HasNoPermalink}
-														</p>
-													</div>
-												</header>
-											</section>
-										{/block:Reblogs}
-									</div>
-								{/block:RebloggedFrom}
-								<footer class="post_footer">
-									<p class="post_info">
-										{block:Video}
-											<span class="info play_count">{PlayCountWithLabel}</span>
-										{/block:Video}
-										{block:IndexPage}
-											{block:NoteCount}
-												<a class="info note_count" href="{Permalink}#notes">{lang:Notes}<sup>({NoteCount})</sup></a>
-											{/block:NoteCount}
-										{/block:IndexPage}
-									</p>
-									{block:HasTags}
-										<div class="post_tags">
-											<p>{lang:Tagged with}</p>
-											<ul class="tags">
-												{block:Tags}
-													<li><a class="tag_link" href="{TagURL}" rel="tag">{Tag}</a></li>
-												{/block:Tags}
-											</ul>
-										</div>
-									{/block:HasTags}
-								</footer>
-								{block:PermalinkPage}
-									{block:PostNotes}
-										<section class="post_notes" id="notes">
-											<h5 class="notes_title">
-												{lang:It has NoteCount notes}
-											</h5>
-											{PostNotes}
-										</section>
-									{/block:PostNotes}
-								{/block:PermalinkPage}
-								{block:Date}
-									{block:PermalinkPage}
-										{block:IfDisqusShortname}
-											<div class="post_comments">
-												<div id="disqus_thread"></div>
-												<script type="text/javascript">
-													var disqus_config = function () {
-														this.page.url = '{Permalink}';
-														this.page.identifier = '{PostID}';
-													};
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{block:PostSummary}{PostSummary} ~ {/block:PostSummary}{block:SearchPage}{lang:SearchResultCount results for SearchQuery}{block:NoSearchResults}{lang:No results found}{/block:NoSearchResults} ~ {/block:SearchPage}{block:TagPage}{lang:Posts tagged Tag} ~ {/block:TagPage}{block:DayPage}{lang:Viewing everything posted on Month DayOfMonth Year} ~ {/block:DayPage}{Title}</title>
+        <meta name="description" content="{MetaDescription}" />
+        <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+        <link rel="shortcut icon" href="{Favicon}" />
+        <link rel="apple-touch-icon" href="{PortraitURL-128}" />
+        <style type="text/css">
+            :root {
+                --color-text: {color:Text Color};
+                --color-background: {color:Content Background Color};
+                --color-accent: {AccentColor};
+                --color-title: {TitleColor};
+                --color-header: {BackgroundColor};
+                --rgb-color-text: {RGBcolor:Text Color};
+                --rgb-color-background: {RGBcolor:Content Background Color};
+                --rgb-color-accent: {RGBAccentColor};
+                --rgb-color-title: {RGBTitleColor};
+                --rgb-color-header: {RGBBackgroundColor};
+                --base-font-family: {TitleFont};
+                --body-font-family: {font:Text Font};
+                --headings-font-weight: {TitleFontWeight};
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/i99f53r/81fqx4771/screen.css" />
+        <style type="text/css">
+            {block:ShowHeaderImage}
+                .with-image {
+                    background-image: url("{HeaderImage}");
+                }
+            {/block:ShowHeaderImage}
+            {CustomCSS}
+        </style>
+    </head>
+    <body>
+        <svg style="width: 0; height: 0; position: absolute; z-index: -5;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol width="1250" height="67" id="transition-fade" viewBox="0 0 1250 67" >
+                    <defs>
+                        <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="625" y1="67" x2="625" y2="0">
+                            <stop offset="0" stop-color="{color:Content background color}" />
+                            <stop offset="1" stop-color="{color:Content background color}" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M0 67h1250V0H0z" fill="url(#a)" />
+                </symbol>
+                <symbol width="1250" height="68" id="transition-wave" viewBox="0 -1 1250 68">
+                    <path d="M0 3.938c149.16-12.371 257.603 7.141 349.24 20.82 125.65 18.707 219.387 36.308 339.135 36.509 84.934.101 176.671-11.868 262.105-21.825 149.66-17.4 234.594-15.69 299.52-10.359V67H0z" fill="{color:Content background color}" />
+                </symbol>
+                <symbol id="transition-bars" width="1250px" height="67px" viewBox="0 0 1250 67">
+                    <path d="M0 67 L0 61 38 61 38 64 76 64 76 66 114 66 114 63 152 63 152 60 190 60 190 52 228 52 228 44 266 44 266 33 304 33 304 24 342 24 342 10 380 10 380 0 418 0 418 18 456 18 456 44 494 44 494 50 532 50 532 55 570 55 570 60 608 60 646 60 646 45 684 45 684 50 722 50 722 38 760 38 760 42 798 42 798 52 836 52 836 45 874 45 874 42 912 42 912 38 950 38 950 33 988 33 988 28 1026 28 1026 18 1064 18 1064 24 1102 24 1102 28 1140 28 1140 24 1178 24 1178 28 1216 28 1216 33 1250 33 1250 67 1216 67 1212 67 1178 67 1140 67 1102 67 1064 67 1026 67 988 67 950 67 912 67 874 67 836 67 798 67 760 67 722 67 684 67 646 67 608 67 570 67 532 67 494 67 456 67 418 67 380 67 342 67 304 67 266 67 228 67 190 67 152 67 114 67 76 67 38 67 0 67 Z" fill="{color:Content background color}" fill-opacity="1" stroke="none"/>
+                </symbol>
+                <symbol id="icon-rss" viewBox="0 0 24 24">
+                    <title>RSS</title>
+                    <path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
+                </symbol>
+                <symbol id="icon-twitter" viewBox="0 0 24 24">
+                    <title>Twitter</title>
+                    <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+                </symbol>
+            </defs>
+        </svg>
+        <div id="site">
+            <header class="masthead {block:ShowHeaderImage}with-image{/block:ShowHeaderImage}">
+                <div class="wrapper">
+                    <h1 class="site_title">
+                        <a href="{BlogURL}" rel="index">
+                            {block:ShowAvatar}
+                                {block:IfLogoImage}
+                                    <img src="{image:Logo}" alt="{block:HideTitle}{Title}{/block:HideTitle}" />
+                                {/block:IfLogoImage}
+                                {block:IfNotLogoImage}
+                                    <img src="{PortraitURL-128}" alt="{block:HideTitle}{Title}{/block:HideTitle}" />
+                                {/block:IfNotLogoImage}
+                            {/block:ShowAvatar}
+                            {block:ShowTitle}
+                                {Title}
+                            {/block:ShowTitle}
+                        </a>
+                    </h1>
+                    {block:IfShowNavigation}
+                        <nav class="site_menu">
+                            {block:AskEnabled}
+                                <a class="menu_item" href="/ask">
+                                    {AskLabel}
+                                </a>
+                            {/block:AskEnabled}
+                            {block:SubmissionsEnabled}
+                                <a class="menu_item" href="/submit">
+                                    {SubmitLabel}
+                                </a>
+                            {/block:SubmissionsEnabled}
+                            {block:HasPages}
+                                {block:Pages}
+                                    <a class="menu_item" href="{URL}">
+                                        {Label}
+                                    </a>
+                                {/block:Pages}
+                            {/block:HasPages}
+                            {block:Twitter}
+                                <a class="menu_item social_link" href="https://twitter.com/{TwitterUsername}" target="_blank" rel="nofollow">
+                                    <svg width="16" height="16">
+                                        <defs>
+                                            <title>Twitter</title>
+                                        </defs>
+                                        <use xlink:href="#icon-twitter" />
+                                    </svg>
+                                </a>
+                            {/block:Twitter}
+                            <a class="menu_item social_link" href="{RSS}" target="_blank" rel="alternate">
+                                <svg width="16" height="16">
+                                    <use xlink:href="#icon-rss" />
+                                </svg>
+                            </a>
+                        </nav>
+                    {/block:IfShowNavigation}
+                </div>
+                <svg viewBox="0 0 1250 68" class="transition {select:Header Decoration}">
+                    <use xlink:href="#transition-{select:Header Decoration}" />
+                </svg>
+            </header>
+            <main class="easel">
+                <div class="wrapper">
+                    <div class="blog">
+                        {block:IndexPage}
+                            {block:SearchPage}
+                                <header class="archive_header">
+                                    <h2 class="archive_title">
+                                        {lang:Search results for SearchQuery 2}
+                                    </h2>
+                                </header>
+                            {/block:SearchPage}
+                            {block:TagPage}
+                                <header class="archive_header">
+                                    <h2 class="archive_title tag_title">
+                                        {lang:Posts tagged Tag 2}
+                                    </h2>
+                                </header>
+                            {/block:TagPage}
+                            {block:DayPage}
+                                <header class="archive_header">
+                                    <h2 class="archive_title day_title">
+                                        {DayOfMonth}{DayOfMonthSuffix} / {ShortMonth} / {Year}
+                                    </h2>
+                                </header>
+                            {/block:DayPage}
+                            {block:NoSearchResults}
+                                <div class="no_posts">
+                                    <p>{lang:Sorry no search results found}</p>
+                                </div>
+                            {/block:NoSearchResults}
+                        {/block:IndexPage}
+                        {block:Posts inlineMediaWidth="1020" inlineNestedMediaWidth="1020"}
+                            <article class="{block:Date}post {/block:Date}{PostType}{block:PermalinkPage} single{/block:PermalinkPage}"{block:Date} data-post-id="{PostID}"{/block:Date}>
+                                <header class="post_header">
+                                    {block:Text}
+                                        {block:Title}
+                                            {block:IndexPage}
+                                                <h2 class="post_title">
+                                                    <a href="{Permalink}" rel="bookmark">{Title}</a>
+                                                </h2>
+                                            {/block:IndexPage}
+                                            {block:PermalinkPage}
+                                                <h1 class="post_title">
+                                                    {Title}
+                                                </h1>
+                                            {/block:PermalinkPage}
+                                        {/block:Title}
+                                    {/block:Text}
+                                    {block:Link}
+                                        {block:IndexPage}
+                                            <h2 class="post_title">
+                                                <a href="{URL}" rel="{Target}">{Name} &rarr;</a>
+                                            </h2>
+                                        {/block:IndexPage}
+                                        {block:PermalinkPage}
+                                            <h1 class="post_title">
+                                                <a href="{URL}" rel="{Target}">{Name} &rarr;</a>
+                                            </h1>
+                                        {/block:PermalinkPage}
+                                    {/block:Link}
+                                    {block:Chat}
+                                        {block:IndexPage}
+                                            <h2 class="post_title">
+                                                <a href="{Permalink}" rel="boolmark">{Title}</a>
+                                            </h2>
+                                        {/block:IndexPage}
+                                        {block:PermalinkPage}
+                                            <h1 class="post_title">
+                                                {Title}
+                                            </h1>
+                                        {/block:PermalinkPage}
+                                    {/block:Chat}
+                                    {block:Date}
+                                        <div class="post_meta">
+                                            <p class="post_info">
+                                                {block:Link}
+                                                    {block:Host}
+                                                        <span class="info link_host">({Host})</span>
+                                                    {/block:Host}
+                                                {/block:Link}
+                                                <a class="info post_author {PostAuthorName}" href="{PostAuthorURL}" rel="author">{PostAuthorTitle}</a>
+                                                <a class="info post_date" href="{Permalink}" rel="bookmark">
+                                                    <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                                                </a>
+                                                {block:IndexPage}
+                                                    {block:IfDisqusShortname}
+                                                        <a class="info comment_count" href="{Permalink}#disqus_thread">{lang:View comments}</a>
+                                                    {/block:IfDisqusShortname}
+                                                {/block:IndexPage}
+                                            </p>
+                                            {block:PermalinkPage}
+                                                <div class="post_actions">
+                                                    {ReblogButton}
+                                                    {LikeButton}
+                                                </div>
+                                            {/block:PermalinkPage}
+                                        </div>
+                                    {/block:Date}
+                                </header>
+                                {block:Photo}
+                                    <figure class="photo">
+                                        {LinkOpenTag}
+                                            <img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}" />
+                                        {LinkCloseTag}
+                                        {block:NotReblog}
+                                            {block:Caption}
+                                                <figcaption class="post_content">
+                                                    {Caption}
+                                                </figcaption>
+                                            {/block:Caption}
+                                        {/block:NotReblog}
+                                    </figure>
+                                {/block:Photo}
+                                {block:Answer}
+                                    <section class="question_and_answer">
+                                        <header class="question">
+                                            <div class="question_info">
+                                                <img class="portrait" src="{AskerPortraitURL-64}" width="32" height="32" role="presentation" alt="" align="left" />
+                                                <p class="asker">
+                                                    {Asker}:
+                                                </p>
+                                            </div>
+                                            <h5 class="q">{Question}</h5>
+                                        </header>
+                                        {block:Answerer}
+                                            <div class="answer">
+                                                <div class="answerer_info">
+                                                    <img class="portrait" src="{AnswererPortraitURL-64}" width="32" height="32" role="presentation" alt="" align="left" />
+                                                    <p class="asnwerer">
+                                                        {Answerer}:
+                                                    </p>
+                                                </div>
+                                                <div class="a">
+                                                    {Answer}
+                                                </div>
+                                            </div>
+                                        {/block:Answerer}
+                                        {block:NotReblog}
+                                            <div class="post_content replies">
+                                                {Replies}
+                                            </div>
+                                        {/block:NotReblog}
+                                        {block:RebloggedFrom}
+                                            <div class="post_content reblog_list">
+                                                {block:Reblogs}
+                                                    <section class="reblog_entry{block:isOriginalEntry} original{/block:isOriginalEntry}">
+                                                        <div class="reblog_content">
+                                                            {Body}
+                                                        </div>
+                                                        <header class="reblog_header">
+                                                            <div class="reblog_info">
+                                                                <img class="portrait" src="{PortraitURL-64}" width="32" height="32" alt="{Username}" role="presentation" align="left" />
+                                                                <p class="reblogged_from">
+                                                                    {lang:Reblogged from}<br />
+                                                                    {block:HasPermalink}
+                                                                        <a href="{Permalink}" rel="author">
+                                                                            {Username}
+                                                                        </a>
+                                                                    {/block:HasPermalink}
+                                                                    {block:HasNoPermalink}
+                                                                        <span class="desactivated">
+                                                                            {Username}
+                                                                        </span>
+                                                                    {/block:HasNoPermalink}
+                                                                </p>
+                                                            </div>
+                                                        </header>
+                                                    </section>
+                                                {/block:Reblogs}
+                                            </div>
+                                        {/block:RebloggedFrom}
+                                    </section>
+                                {/block:Answer}
+                                {block:Text}
+                                    {block:NotReblog}
+                                        <div class="post_content">
+                                            {Body}
+                                        </div>
+                                    {/block:NotReblog}
+                                {/block:Text}
+                                {block:Link}
+                                    <div class="post_content">
+                                        {block:Excerpt}
+                                            <blockquote class="link_excerpt">
+                                                <p>{Excerpt}</p>
+                                                {block:Author}
+                                                    <cite class="link_author">&mdash; {Author}</cite>
+                                                {/block:Author}
+                                            </blockquote>
+                                        {/block:Excerpt}
+                                        {block:Description}
+                                            {Description}
+                                        {/block:Description}
+                                    </div>
+                                {/block:Link}
+                                {block:Audio}
+                                    <div class="audio_container">
+                                        {block:AudioEmbed}
+                                            {AudioEmbed-640}
+                                        {/block:AudioEmbed}
+                                        {block:AudioPlayer}
+                                            <div class="audio_info">
+                                                {block:AlbumArt}
+                                                    <div class="album_art">
+                                                        <img src="{AlbumArtURL}" alt="" role="presentation" />
+                                                    </div>
+                                                {/block:AlbumArt}
+                                                <div class="player_container">
+                                                    <p class="track_details">
+                                                        {block:TrackName}
+                                                            <span class="track_name">{TrackName}</span>
+                                                        {/block:TrackName}
+                                                        {block:Artist} &mdash; {Artist}{/block:Artist}
+                                                    </p>
+                                                    {AudioPlayer}
+                                                </div>
+                                            </div>
+                                        {/block:AudioPlayer}
+                                    </div>
+                                    {block:NotReblog}
+                                        <div class="post_content">
+                                            {Caption}
+                                        </div>
+                                    {/block:NotReblog}
+                                {/block:Audio}
+                                {block:Video}
+                                    <figure class="video_block{block:Caption} with_caption{/block:Caption}">
+                                        <div class="video_wrapper">
+                                            {Video-700}
+                                        </div>
+                                        {block:NotReblog}
+                                            {block:Caption}
+                                                <figcaption class="post_content">
+                                                    {Caption}
+                                                </figcaption>
+                                            {/block:Caption}
+                                        {/block:NotReblog}
+                                    </figure>
+                                {/block:Video}
+                                {block:Photoset}
+                                    <figure class="photo photoset">
+                                        {Photoset}
+                                        {block:NotReblog}
+                                            {block:Caption}
+                                                <figcaption class="post_content">
+                                                    {Caption}
+                                                </figcaption>
+                                            {/block:Caption}
+                                        {/block:NotReblog}
+                                    </figure>
+                                {/block:Photoset}
+                                {block:Quote}
+                                    <div class="post_content">
+                                        <blockquote class="quote {Length}">
+                                            <div class="quoted-text">
+                                                &ldquo;{Quote}&rdquo;
+                                            </div>
+                                            {block:Source}
+                                                <cite class="quote-source">&mdash; {Source}</cite>
+                                            {/block:Source}
+                                        </blockquote>
+                                    </div>
+                                {/block:Quote}
+                                {block:Panorama}
+                                    <figure class="photo panorama">
+                                        {LinkOpenTag}
+                                            <img src="{PhotoURL-Panorama}" width="{PhotoWidth-Panorama}" height="{PhotoHeight-Panorama}" alt="{PhotoAlt}" />
+                                        {LinkCloseTag}
+                                        {block:NotReblog}
+                                            {block:Caption}
+                                                <figcaption class="post_content">
+                                                    {Caption}
+                                                </figcaption>
+                                            {/block:Caption}
+                                        {/block:NotReblog}
+                                    </figure>
+                                {/block:Panorama}
+                                {block:Chat}
+                                    <div class="post_content">
+                                        <ul class="chat">
+                                            {block:Lines}
+                                                <li class="{Alt} user_{UserNumber}">
+                                                    {block:Label}<strong class="speaker">{Label}</strong>{/block:Label}
+                                                    <span class="says">{Line}</span>
+                                                </li>
+                                            {/block:Lines}
+                                        </ul>
+                                    </div>
+                                {/block:Chat}
+                                {block:RebloggedFrom}
+                                    <div class="post_content reblog_list">
+                                        {block:Reblogs}
+                                            <section class="reblog_entry{block:isOriginalEntry} original{/block:isOriginalEntry}">
+                                                <div class="reblog_content">
+                                                    {Body}
+                                                </div>
+                                                <header class="reblog_header">
+                                                    <div class="reblog_info">
+                                                        <img class="portrait" src="{PortraitURL-64}" width="32" height="32" alt="{Username}" role="presentation" align="left" />
+                                                        <p class="reblogged_from">
+                                                            {lang:Reblogged from}<br />
+                                                            {block:HasPermalink}
+                                                                <a href="{Permalink}" rel="author">
+                                                                    {Username}
+                                                                </a>
+                                                            {/block:HasPermalink}
+                                                            {block:HasNoPermalink}
+                                                                <span class="desactivated">
+                                                                    {Username}
+                                                                </span>
+                                                            {/block:HasNoPermalink}
+                                                        </p>
+                                                    </div>
+                                                </header>
+                                            </section>
+                                        {/block:Reblogs}
+                                    </div>
+                                {/block:RebloggedFrom}
+                                <footer class="post_footer">
+                                    <p class="post_info">
+                                        {block:Video}
+                                            <span class="info play_count">{PlayCountWithLabel}</span>
+                                        {/block:Video}
+                                        {block:IndexPage}
+                                            {block:NoteCount}
+                                                <a class="info note_count" href="{Permalink}#notes">{lang:Notes}<sup>({NoteCount})</sup></a>
+                                            {/block:NoteCount}
+                                        {/block:IndexPage}
+                                    </p>
+                                    {block:HasTags}
+                                        <div class="post_tags">
+                                            <p>{lang:Tagged with}</p>
+                                            <ul class="tags">
+                                                {block:Tags}
+                                                    <li><a class="tag_link" href="{TagURL}" rel="tag">{Tag}</a></li>
+                                                {/block:Tags}
+                                            </ul>
+                                        </div>
+                                    {/block:HasTags}
+                                </footer>
+                                {block:PermalinkPage}
+                                    {block:PostNotes}
+                                        <section class="post_notes" id="notes">
+                                            <h5 class="notes_title">
+                                                {lang:It has NoteCount notes}
+                                            </h5>
+                                            {PostNotes}
+                                        </section>
+                                    {/block:PostNotes}
+                                {/block:PermalinkPage}
+                                {block:Date}
+                                    {block:PermalinkPage}
+                                        {block:IfDisqusShortname}
+                                            <div class="post_comments">
+                                                <div id="disqus_thread"></div>
+                                                <script type="text/javascript">
+                                                    var disqus_config = function () {
+                                                        this.page.url = '{Permalink}';
+                                                        this.page.identifier = '{PostID}';
+                                                    };
 
-													(function() { // DON'T EDIT BELOW THIS LINE
-														var d = document, s = d.createElement('script');
-														s.src = 'https://{text:Disqus Shortname}.disqus.com/embed.js';
-														s.setAttribute('data-timestamp', +new Date());
-														(d.head || d.body).appendChild(s);
-													})();
-												</script>
-												<noscript>{lang:Blog comments powered by Disqus 2}</noscript>
-											</div>
-										{/block:IfDisqusShortname}
-									{/block:PermalinkPage}
-								{/block:Date}
-							</article>
-						{/block:Posts}
-						{block:Pagination}
-							<nav class="pagination">
-								{block:PreviousPage}
-									<a href="{PreviousPage}" rel="prev">
-										&larr; {lang:Newer posts}
-									</a>
-								{/block:PreviousPage}
-								{block:NextPage}
-									<a href="{NextPage}" rel="next">
-										{lang:Older posts} &rarr;
-									</a>
-								{/block:NextPage}
-								<a class="archive_link" href="/archive">
-									({lang:Browse the archive})
-								</a>
-							</nav>
-						{/block:Pagination}
-						{block:PermalinkPagination}
-							<nav class="pagination">
-								{block:PreviousPost}
-									<a href="{PreviousPost}" rel="prev">
-										&larr; {lang:Previous post}
-									</a>
-								{/block:PreviousPost}
-								{block:NextPost}
-									<a href="{NextPost}" rel="next">
-										{lang:Next post} &rarr;
-									</a>
-								{/block:NextPost}
-								<a class="random_link" href="/random">
-									({lang:Random post})
-								</a>
-							</nav>
-						{/block:PermalinkPagination}
-						{block:DayPagination}
-							<nav class="pagination">
-								{block:PreviousDayPage}
-									<a href="{PreviousDayPage}" rel="prev">
-										&larr; {lang:Previous day}
-									</a>
-								{/block:PreviousDayPage}
-								{block:NextDayPage}
-									<a href="{NextDayPage}" rel="next">
-										{lang:Next day} &rarr;
-									</a>
-								{/block:NextDayPage}
-								<a class="archive_link" href="/archive">
-									({lang:Browse the archive})
-								</a>
-							</nav>
-						{/block:DayPagination}
-					</div>
-						<aside class="sidebar">
-							{block:IfWidget}
-								<div class="sidebar_widget">
-									{text:Widget}
-								</div>
-							{/block:IfWidget}
-							{block:IfTwitterWidgetTitle}
-								{block:Twitter}
-									<div class="links" id="twitter" style="display:none;">
-										<h3>
-											<a href="https://twitter.com/{TwitterUsername}">{text:Twitter Widget Title}</a>
-										</h3>
-										<ul id="tweets"></ul>
-									</div>
-									<script type="text/javascript">
-										function recent_tweets(data) {
-											for (i=0; i<{text:Tweets To Show}; i++) {
-												document.getElementById("tweets").innerHTML =
-													document.getElementById("tweets").innerHTML +
-													'<li><a class="twitter_link" href="https://twitter.com/{TwitterUsername}/status/' +
-													(data[i].id_str ? data[i].id_str : data[i].id) +
-													'">' + data[i].text +
-													'</a></li>';
-											}
+                                                    (function() { // DON'T EDIT BELOW THIS LINE
+                                                        var d = document, s = d.createElement('script');
+                                                        s.src = 'https://{text:Disqus Shortname}.disqus.com/embed.js';
+                                                        s.setAttribute('data-timestamp', +new Date());
+                                                        (d.head || d.body).appendChild(s);
+                                                    })();
+                                                </script>
+                                                <noscript>{lang:Blog comments powered by Disqus 2}</noscript>
+                                            </div>
+                                        {/block:IfDisqusShortname}
+                                    {/block:PermalinkPage}
+                                {/block:Date}
+                            </article>
+                        {/block:Posts}
+                        {block:Pagination}
+                            <nav class="pagination">
+                                {block:PreviousPage}
+                                    <a href="{PreviousPage}" rel="prev">
+                                        &larr; {lang:Newer posts}
+                                    </a>
+                                {/block:PreviousPage}
+                                {block:NextPage}
+                                    <a href="{NextPage}" rel="next">
+                                        {lang:Older posts} &rarr;
+                                    </a>
+                                {/block:NextPage}
+                                <a class="archive_link" href="/archive">
+                                    ({lang:Browse the archive})
+                                </a>
+                            </nav>
+                        {/block:Pagination}
+                        {block:PermalinkPagination}
+                            <nav class="pagination">
+                                {block:PreviousPost}
+                                    <a href="{PreviousPost}" rel="prev">
+                                        &larr; {lang:Previous post}
+                                    </a>
+                                {/block:PreviousPost}
+                                {block:NextPost}
+                                    <a href="{NextPost}" rel="next">
+                                        {lang:Next post} &rarr;
+                                    </a>
+                                {/block:NextPost}
+                                <a class="random_link" href="/random">
+                                    ({lang:Random post})
+                                </a>
+                            </nav>
+                        {/block:PermalinkPagination}
+                        {block:DayPagination}
+                            <nav class="pagination">
+                                {block:PreviousDayPage}
+                                    <a href="{PreviousDayPage}" rel="prev">
+                                        &larr; {lang:Previous day}
+                                    </a>
+                                {/block:PreviousDayPage}
+                                {block:NextDayPage}
+                                    <a href="{NextDayPage}" rel="next">
+                                        {lang:Next day} &rarr;
+                                    </a>
+                                {/block:NextDayPage}
+                                <a class="archive_link" href="/archive">
+                                    ({lang:Browse the archive})
+                                </a>
+                            </nav>
+                        {/block:DayPagination}
+                    </div>
+                        <aside class="sidebar">
+                            {block:IfWidget}
+                                <div class="sidebar_widget">
+                                    {text:Widget}
+                                </div>
+                            {/block:IfWidget}
+                            {block:IfTwitterWidgetTitle}
+                                {block:Twitter}
+                                    <div class="links" id="twitter" style="display:none;">
+                                        <h3>
+                                            <a href="https://twitter.com/{TwitterUsername}">{text:Twitter Widget Title}</a>
+                                        </h3>
+                                        <ul id="tweets"></ul>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function recent_tweets(data) {
+                                            for (i=0; i<{text:Tweets To Show}; i++) {
+                                                document.getElementById("tweets").innerHTML =
+                                                    document.getElementById("tweets").innerHTML +
+                                                    '<li><a class="twitter_link" href="https://twitter.com/{TwitterUsername}/status/' +
+                                                    (data[i].id_str ? data[i].id_str : data[i].id) +
+                                                    '">' + data[i].text +
+                                                    '</a></li>';
+                                            }
 
-											document.getElementById("twitter").style.display = 'block';
-										}
-									</script>
-								{/block:Twitter}
-							{/block:IfTwitterWidgetTitle}
-							<div class="fixed_menu">
-								<input id="toggle_menu" type="checkbox" />
-								<label for="toggle_menu">
-									<img width="48" height="48" src="{PortraitURL-96}" alt="{lang:Navigate}" role="img" />
-								</label>
-								<nav class="menu">
-									<form action="/search" method="get">
-										<input type="search" name="q" placeholder="{lang:Search keywords}" />
-									</form>
-									{block:HasPages}
-										{block:Pages}
-											<a class="menu_item" href="{URL}">
-												{Label}
-											</a>
-										{/block:Pages}
-									{/block:HasPages}
-									{block:AskEnabled}
-										<a class="menu_item" href="/ask">
-											{AskLabel}
-										</a>
-									{/block:AskEnabled}
-									{block:SubmissionsEnabled}
-										<a class="menu_item" href="/submit">
-											{SubmitLabel}
-										</a>
-									{/block:SubmissionsEnabled}
-								</nav>
-							</div>
-						</aside>
-				</div>
-			</main>
-			<footer class="colophon">
-				<div class="wrapper">
-					<div class="footer_widgets">
-						{block:Description}
-							<div class="site_description">
-								{Description}
-							</div>
-						{/block:Description}
-					</div>
-					<p class="site_credits">
-						&copy; <a href="{BlogURL}" rel="index">{Title}</a>{block:IfCopyrightText} ~ {text:Copyright Text}{/block:IfCopyrightText}
-					</p>
-				</div>
-			</footer>
-		</div>
-		<script type="text/javascript" src="https://static.tumblr.com/i99f53r/fiJqx17u3/scripts.js"></script>
-		{block:IndexPage}
-			{block:Twitter}
-				<script type="text/javascript" src="/tweets.js"></script>
-			{/block:Twitter}
-			{block:IfDisqusShortname}
-				<script id="dsq-count-scr" async await src="//{text:Disqus Shortname}.disqus.com/count.js"></script>
-			{/block:IfDisqusShortname}
-		{/block:IndexPage}
-	</body>
+                                            document.getElementById("twitter").style.display = 'block';
+                                        }
+                                    </script>
+                                {/block:Twitter}
+                            {/block:IfTwitterWidgetTitle}
+                            <div class="fixed_menu">
+                                <input id="toggle_menu" type="checkbox" />
+                                <label for="toggle_menu">
+                                    <img width="48" height="48" src="{PortraitURL-96}" alt="{lang:Navigate}" role="img" />
+                                </label>
+                                <nav class="menu">
+                                    <form action="/search" method="get">
+                                        <input type="search" name="q" placeholder="{lang:Search keywords}" />
+                                    </form>
+                                    {block:HasPages}
+                                        {block:Pages}
+                                            <a class="menu_item" href="{URL}">
+                                                {Label}
+                                            </a>
+                                        {/block:Pages}
+                                    {/block:HasPages}
+                                    {block:AskEnabled}
+                                        <a class="menu_item" href="/ask">
+                                            {AskLabel}
+                                        </a>
+                                    {/block:AskEnabled}
+                                    {block:SubmissionsEnabled}
+                                        <a class="menu_item" href="/submit">
+                                            {SubmitLabel}
+                                        </a>
+                                    {/block:SubmissionsEnabled}
+                                </nav>
+                            </div>
+                        </aside>
+                </div>
+            </main>
+            <footer class="colophon">
+                <div class="wrapper">
+                    <div class="footer_widgets">
+                        {block:Description}
+                            <div class="site_description">
+                                {Description}
+                            </div>
+                        {/block:Description}
+                    </div>
+                    <p class="site_credits">
+                        &copy; <a href="{BlogURL}" rel="index">{Title}</a>{block:IfCopyrightText} ~ {text:Copyright Text}{/block:IfCopyrightText}
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="https://static.tumblr.com/i99f53r/jHgqx46js/scripts.js"></script>
+        {block:IndexPage}
+            {block:Twitter}
+                <script type="text/javascript" src="/tweets.js"></script>
+            {/block:Twitter}
+            {block:IfDisqusShortname}
+                <script id="dsq-count-scr" async await src="//{text:Disqus Shortname}.disqus.com/count.js"></script>
+            {/block:IfDisqusShortname}
+        {/block:IndexPage}
+    </body>
 </html>
