@@ -20,8 +20,8 @@
 
 .wrapper {
 	max-width: calc(#{$content-width} + #{$spacing-unit});
-	padding-left: $spacing-unit / 2;
-	padding-right: $spacing-unit / 2;
+	padding-left: calc(#{$spacing-unit} / #{2});
+	padding-right: calc(#{$spacing-unit} / #{2});
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -46,7 +46,7 @@
 			vertical-align: bottom;
 			width: auto;
 			height: 64px;
-			margin-right: $spacing-unit / 2;
+			margin-right: calc(#{$spacing-unit} / #{2});
 
 			@include media-query($on-palm) {
 				display: block;
@@ -79,8 +79,8 @@
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
 			-ms-overflow-style: -ms-autohiding-scrollbar;
-			margin-left: -$spacing-unit / 2;
-			margin-right: -$spacing-unit / 2;
+			margin-left: calc(#{$spacing-unit} / #{-2});
+			margin-right: calc(#{$spacing-unit} / #{-2});
 
 			&::before,
 			&::after {
@@ -111,7 +111,7 @@
 	.transition {
 		line-height: 0;
 		display: block;
-		transform: translateY(1px);
+		transform: translateY(1px) scale(1.05, 1.05);
 
 		&.none {
 			display: none;
@@ -126,8 +126,8 @@
 	z-index: 2;
 	background: $color-background;
 	box-shadow: 0 8px 0 rgba($color-text-rgb, 0.2);
-	padding-top: $spacing-unit * 2;
-	padding-bottom: $spacing-unit * 2;
+	padding-top: calc(#{$spacing-unit} * #{2});
+	padding-bottom: calc(#{$spacing-unit} * #{2});
 
 	& > .wrapper {
 		display: flex;
@@ -156,8 +156,8 @@
 
 	.post {
 		&:not(:last-child) {
-			margin-bottom: $spacing-unit * 4;
-			padding-bottom: $spacing-unit * 4;
+			margin-bottom: calc(#{$spacing-unit} * #{4});
+			padding-bottom: calc(#{$spacing-unit} * #{2});
 			border-bottom: 1px dashed rgba($color-text-rgb, 0.2);
 		}
 
@@ -184,12 +184,12 @@
 					display: inline-flex;
 
 					@include media-query($on-palm) {
-						margin-top: $spacing-unit / 4;
+						margin-top: calc(#{$spacing-unit} / #{4});
 						margin-left: auto;
 					}
 
 					> * {
-						margin-left: $spacing-unit / 4;
+						margin-left: calc(#{$spacing-unit} / #{4});
 					}
 				}
 
@@ -208,7 +208,7 @@
 			margin-top: $spacing-unit;
 
 			.post_info {
-				margin-bottom: $spacing-unit / 2;
+				margin-bottom: calc(#{$spacing-unit} / #{2});
 			}
 
 			.post_tags {
@@ -229,8 +229,8 @@
 
 						&:not(:last-child) {
 							&::after {
-								padding-left: $spacing-unit / 4;
-								padding-right: $spacing-unit / 4;
+								padding-left: calc(#{$spacing-unit} / #{4});
+								padding-right: calc(#{$spacing-unit} / #{4});
 								content: "/";
 								color: rgba($color-text-rgb, 0.2);
 							}
@@ -241,7 +241,7 @@
 		}
 
 		.post_notes {
-			margin-top: $spacing-unit * 3;
+			margin-top: calc(#{$spacing-unit} * #{3});
 
 			.notes_title {
 				margin-bottom: $spacing-unit;
@@ -254,8 +254,8 @@
 				margin-left: 0;
 
 				.note {
-					margin-top: $spacing-unit / 2;
-					margin-bottom: $spacing-unit / 2;
+					margin-top: calc(#{$spacing-unit} / #{2});
+					margin-bottom: calc(#{$spacing-unit} / #{2});
 					font-size: 1.2rem;
 					font-style: italic;
 
@@ -263,7 +263,7 @@
 						border-radius: 50%;
 						display: inline-block;
 						vertical-align: middle;
-						margin-right: $spacing-unit / 4;
+						margin-right: calc(#{$spacing-unit} / #{4});
 					}
 
 					a {
@@ -275,7 +275,7 @@
 		}
 
 		.post_comments {
-			margin-top: $spacing-unit * 3;
+			margin-top: calc(#{$spacing-unit} * #{3});
 		}
 
 		.post_info {
@@ -284,7 +284,7 @@
 			color: rgba($color-text-rgb, 0.4);
 
 			.info:not(:last-child) {
-				margin-right: $spacing-unit / 2;
+				margin-right: calc(#{$spacing-unit} / #{2});
 			}
 		}
 	}
@@ -301,7 +301,7 @@
 	}
 
 	.portrait {
-		margin-right: $spacing-unit / 2;
+		margin-right: calc(#{$spacing-unit} / #{2});
 		border-radius: 50%;
 	}
 
@@ -334,7 +334,7 @@
 		@include media-query($on-palm) {
 			width: 75px;
 			height: 75px;
-			margin-right: $spacing-unit / 2;
+			margin-right: calc(#{$spacing-unit} / #{2});
 		}
 	}
 }
@@ -348,7 +348,7 @@
 
 	a {
 		display: inline-block;
-		padding: $spacing-unit / 6 $spacing-unit / 4;
+		padding: calc(#{$spacing-unit} / #{4}) calc(#{$spacing-unit} / #{4});
 		font-size: 1.2rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -360,11 +360,11 @@
 		border-radius: 2px;
 
 		&:not(:last-child) {
-			margin-right: $spacing-unit / 2;
+			margin-right: calc(#{$spacing-unit} / #{2});
 
 			@include media-query($on-palm) {
 				margin-right: 0;
-				margin-bottom: $spacing-unit / 2;
+				margin-bottom: calc(#{$spacing-unit} / #{2});
 			}
 		}
 
@@ -402,8 +402,8 @@
 
 		@include media-query($on-palm) {
 			margin-left: 0;
-			margin-top: $spacing-unit * 2;
-			margin-bottom: $spacing-unit * 2;
+			margin-top: calc(#{$spacing-unit} * #{2});
+			margin-bottom: calc(#{$spacing-unit} * #{2});
 		}
 
 		.sidebar_widget {
@@ -419,7 +419,7 @@
 				font-size: 1.2rem;
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
-				margin-bottom: $spacing-unit / 2;
+				margin-bottom: calc(#{$spacing-unit} / #{2});
 			}
 
 			.twitter_link {
@@ -434,7 +434,7 @@
 				list-style: none;
 
 				li {
-					margin-bottom: $spacing-unit / 2;
+					margin-bottom: calc(#{$spacing-unit} / #{2});
 
 					a {
 						text-decoration: underline;
@@ -448,7 +448,7 @@
 		.fixed_menu {
 			margin-top: $spacing-unit;
 			position: sticky;
-			top: $spacing-unit * 3;
+			top: calc(#{$spacing-unit} * #{3});
 			text-align: right;
 
 			@include media-query($on-palm) {
@@ -477,7 +477,7 @@
 
 				@include media-query($on-palm) {
 					display: none;
-					padding: $spacing-unit / 2;
+					padding: calc(#{$spacing-unit} / #{2});
 					background-color: $color-accent;
 					color: $color-background;
 
@@ -494,8 +494,8 @@
 				form,
 				a {
 					display: inline-block;
-					margin-top: $spacing-unit / 4;
-					margin-bottom: $spacing-unit / 4;
+					margin-top: calc(#{$spacing-unit} / #{4});
+					margin-bottom: calc(#{$spacing-unit} / #{4});
 				}
 
 				input[type="search"] {
@@ -503,6 +503,14 @@
 
 					@include media-query($on-palm) {
 						border-bottom-color: $color-background;
+
+						&:-webkit-placeholder {
+							color: $color-background;
+						}
+
+						&:-moz-placeholder {
+							color: $color-background;
+						}
 					}
 				}
 			}
@@ -526,8 +534,8 @@
 .colophon {
 	background: $color-footer;
 	color: $color-background;
-	padding-top: $spacing-unit * 2;
-	padding-bottom: $spacing-unit * 2;
+	padding-top: calc(#{$spacing-unit} * #{2});
+	padding-bottom: calc(#{$spacing-unit} * #{2});
 	font-family: $body-font-family;
 	position: fixed;
 	bottom: 0;
